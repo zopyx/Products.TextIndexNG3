@@ -106,6 +106,10 @@ class TextIndexNG3(SimpleItem, PropertyManager):
         """ return indexed fields """
         return self.index.fields
 
+    def getIndexQueryNames(self):
+        """ Return queryable parameters """
+        return [self.id]
+
     def indexSize(self):
         return len(self.index.getLexicon())
 
