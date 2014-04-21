@@ -1,3 +1,7 @@
+3.4.8 (2014/04/21)
+==================
+- fixed unit test failing between Plone 4.3.2 and Plone 4.3.3
+
 3.4.7 (2013/05/26)
 ==================
 - workaround for plone.app.multilingual misbehaviour in cmf_adapters
