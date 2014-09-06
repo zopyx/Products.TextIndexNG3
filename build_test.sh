@@ -28,6 +28,13 @@ then
     config=alltests-plone43.cfg
 fi
 
+if [[ "$1" = "plone-5.0" ]]
+then
+    python_version=2.7
+    config=alltests-plone50.cfg
+fi
+
+
 virtualenv-$python_version .
 bin/python bootstrap.py -c $config
 bin/buildout -c $config
