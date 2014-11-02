@@ -1,2 +1,2 @@
-script: build_test.sh plone-4.3
+script: "bash build_test.sh plone-4.3"
 
