@@ -1,2 +1,3 @@
+language:  python
 script: "bash build_test.sh plone-4.3"
 
