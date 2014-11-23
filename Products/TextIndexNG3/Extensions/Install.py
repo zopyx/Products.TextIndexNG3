@@ -66,7 +66,11 @@ def install(self):
     if configTool:
         for conf in configlets:
             print >>out, 'Adding configlet %s\n' % conf['id']
-            configTool.registerConfiglet(**conf)
+            try: # Plone 4.x
+                configTool.registerConfiglet(**conf)
+            except TypeError: # Plone 5
+                del conf['imageUrl']
+                configTool.registerConfiglet(**conf)
 
     print >> out, "Successfully installed"  
     return out.getvalue()
