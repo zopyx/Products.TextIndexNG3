@@ -2,13 +2,14 @@ language:  python
 
 python:
   - "2.7"
-  - "2.6"
 
 before_script:
   - sudo apt-get install -qq pdftk
   - sudo apt-get install -qq poppler-utils
 
-script: "bash build_test.sh plone-4.3"
+script: 
+  -  "bash build_test.sh plone-4.3"
+  -  "bash build_test.sh plone-5.0"
 
 notifications:
   irc:
