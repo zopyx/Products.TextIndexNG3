@@ -36,6 +36,7 @@ fi
 
 
 virtualenv-$python_version .
+bin/pip install -U setuptools
 bin/python bootstrap.py -c $config
 bin/buildout -c $config
 bin/alltests-jenkins --xml
