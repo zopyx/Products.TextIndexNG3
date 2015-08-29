@@ -18,8 +18,6 @@ from zope.interface import implements
 
 from Products.CMFCore.interfaces import IContentish
 from Products.CMFCore.utils import getToolByName
-from Products.CMFDefault.interfaces import IDocument
-from Products.CMFDefault.interfaces import IFile
 
 from zopyx.txng3.core.interfaces import IIndexableContent
 from zopyx.txng3.core.content import IndexContentCollector as ICC
@@ -97,47 +95,3 @@ class CMFContentAdapter:
         icc.addContent('SearchableText', text, self.language)
 
 
-class CMFDocumentAdapter(CMFContentAdapter):
-
-    """An adapter for CMFDefault documents.
-    """
-
-    adapts(IDocument)
-
-    def addSearchableTextField(self, icc):
-        title = self._c(self.context.Title())
-        icc.addContent('SearchableText', title, self.language)
-
-        description = self._c(self.context.Description())
-        icc.addContent('SearchableText', description, self.language)
-
-        body = self._c(self.context.EditableBody())
-        if body:
-            mt = self.context.Format()
-            if mt == 'text/plain':
-                icc.addContent('SearchableText', body, self.language)
-            else:
-                icc.addBinary('SearchableText', body, mt, None, self.language)
-
-
-class CMFFileAdapter(CMFContentAdapter):
-
-    """An adapter for CMFDefault files.
-    """
-
-    adapts(IFile)
-
-    def addSearchableTextField(self, icc):
-        title = self._c(self.context.Title())
-        icc.addContent('SearchableText', title, self.language)
-
-        description = self._c(self.context.Description())
-        icc.addContent('SearchableText', description, self.language)
-
-        body = str(self.context)
-        if body:
-            mt = self.context.Format()
-            if mt == 'text/plain':
-                icc.addContent('SearchableText', self._c(body), self.language)
-            else:
-                icc.addBinary('SearchableText', body, mt, None, self.language)

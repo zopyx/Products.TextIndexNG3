@@ -372,7 +372,7 @@ Query constraints
 Contact
 =======
 
-| ZOPYX Ltd. 
+| ZOPYX/Andreas Jung 
 | Hundskapfklinge 33
 | D-72074 Tuebingen, Germany
 | E-mail: info at zopyx dot com
