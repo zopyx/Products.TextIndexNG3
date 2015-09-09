@@ -56,4 +56,8 @@ setup(name='Products.TextIndexNG3',
                      ,'test_optionals' : test_optionals_requirements
                      },
       namespace_packages=['Products'],
+      entry_points="""
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )
