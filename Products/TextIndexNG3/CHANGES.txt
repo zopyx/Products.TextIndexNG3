@@ -1,3 +1,7 @@
+3.4.11 (2015/09/09)
+==================
+- fixed Plone 5 installation issue
+
 3.4.10 (2015/29/08)
 ===================
 - Plone 5.0 compatibility 
