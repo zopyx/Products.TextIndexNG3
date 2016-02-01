@@ -14,7 +14,7 @@
 LANGUAGES = ('en', )
 #LANGUAGES = ('en', 'de')
 
-encoding = context.portal_properties.site_properties.default_charset
+encoding = 'utf-8'
 
 metatypes =  ['ZCTextIndex', 'TextIndex', 'TextIndexNG2', 'TextIndexNG3']
 needed = ('SearchableText', 'Title', 'Description')
