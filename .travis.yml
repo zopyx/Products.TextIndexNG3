@@ -1,4 +1,5 @@
 language:  python
+distro: trusty
 
 before_script:
   - sudo apt-get install -qq poppler-utils
