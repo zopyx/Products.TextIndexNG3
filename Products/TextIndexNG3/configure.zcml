@@ -52,6 +52,7 @@
   <!-- profiles -->
 
   <genericsetup:registerProfile
+      zcml:condition="installed Products.GenericSetup"
       name="default"
       title="TextIndexNG3"
       description="Adds TextIndexNG3 support."
