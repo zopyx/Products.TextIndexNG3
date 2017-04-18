@@ -22,6 +22,7 @@ then
     config=alltests-plone51.cfg
 fi
 
-python bootstrap.py
-bin/buildout -c $config
+pip install zc.buildout
+buildout bootstrap
+buildout -c $config
 bin/test
