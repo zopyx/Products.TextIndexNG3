@@ -10,6 +10,7 @@ before_script:
 script: 
   -  "bash build_test.sh plone-4.3"
   -  "bash build_test.sh plone-5.0"
+  -  "bash build_test.sh plone-5.1"
 
 notifications:
   irc:
