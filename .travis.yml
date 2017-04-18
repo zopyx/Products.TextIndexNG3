@@ -4,17 +4,14 @@ python:
   - "2.7"
 
 before_script:
-#  - sudo apt-get install -qq pdftk
   - sudo apt-get install -qq poppler-utils
 
-script: 
-  -  "bash build_test.sh plone-4.3"
-  -  "bash build_test.sh plone-5.0"
-  -  "bash build_test.sh plone-5.1"
 
-notifications:
-  irc:
-    channels:
-      - "irc.freenode.org#sprint"
-    template:
-      - "%{repository}/#%{build_number}/%{branch} (%{author}): %{message} %{build_url}"
+matrix
+
+  include
+  - python "2.7"
+  env VERSION=plone-4.3
+
+script: bash build_test.sh $VERSION 
+
