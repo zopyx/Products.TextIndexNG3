@@ -16,6 +16,11 @@ then
     config=alltests-plone50.cfg
 fi
 
+if [[ "$1" = "plone-5.1" ]]
+then
+    python_version=2.7
+    config=alltests-plone51.cfg
+fi
 
 virtualenv-$python_version .
 bin/pip install zc.buildout
