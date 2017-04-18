@@ -7,11 +7,10 @@ before_script:
   - sudo apt-get install -qq poppler-utils
 
 
-matrix
-
-  include
-  - python "2.7"
-  env VERSION=plone-4.3
+matrix:
+  include:
+     - python: "2.7"
+       env: = "plone-4.3"
 
 script: bash build_test.sh $VERSION 
 
