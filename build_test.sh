@@ -8,7 +8,7 @@ if [[ "$1" = "plone-4.3" ]]
 then
     python_version=2.7
     config=alltests-plone43.cfg
-    buildout=1.7.1
+    buildout=2.5.3
 fi
 
 if [[ "$1" = "plone-5.0" ]]
