@@ -22,7 +22,7 @@ then
     config=alltests-plone51.cfg
 fi
 
-virtualenv-$python_version .
+virtualenv-$python_version --clear .
 bin/pip install zc.buildout
 bin/buildout bootstrap
 bin/buildout -c $config
