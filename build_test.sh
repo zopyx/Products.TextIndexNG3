@@ -25,6 +25,7 @@ fi
 #virtualenv --clear .
 #which python
 python --version
+pip install -U setuptools==36.6.0
 #bin/python --version
 pip install zc.buildout
 buildout bootstrap
