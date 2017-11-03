@@ -23,6 +23,8 @@ then
 fi
 
 virtualenv --clear .
+which python
+python --version
 bin/python --version
 bin/pip install zc.buildout
 bin/buildout bootstrap
