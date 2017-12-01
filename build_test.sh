@@ -22,12 +22,9 @@ then
     config=alltests-plone51.cfg
 fi
 
-#virtualenv --clear .
-#which python
 python --version
 pip install -U setuptools==36.6.0
-#bin/python --version
-pip install zc.buildout
+pip install zc.buildout==2.9.5
 buildout bootstrap
 buildout -c $config
 bin/test
