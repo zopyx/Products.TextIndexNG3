@@ -1,6 +1,8 @@
 language:  python
 dist: trusty
 
+group: deprecated-2017Q4
+
 before_script:
   - sudo apt-get install -qq poppler-utils
 
