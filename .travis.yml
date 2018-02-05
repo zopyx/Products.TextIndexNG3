@@ -1,6 +1,5 @@
 language:  python
 dist: trusty
-python: 2.7.13
 
 #group: deprecated-2017Q4
 
@@ -9,9 +8,9 @@ before_script:
 
 matrix:
   include:
-     - python: "2.7"
+     - python: "2.7.13"
        env: VERSION=plone-4.3
-     - python: "2.7"
+     - python: "2.7.13"
        env: VERSION=plone-5.0
      - python: "2.7.13"
        env: VERSION=plone-5.1
