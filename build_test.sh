@@ -25,6 +25,7 @@ fi
 python --version
 pip install -U setuptools==36.6.0
 pip install zc.buildout==2.9.5
+pip install six=1.10.0
 buildout bootstrap
 buildout -c $config
 bin/test
